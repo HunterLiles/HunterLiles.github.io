@@ -14,6 +14,7 @@ ul {
 img {
   box-shadow: 2px 3px 3px 3px rgba(0, 0, 0, 0.6);
   border: 3px dashed;
+  margin-left: 650px;
 }
 h1 {
   font-family: TempleOS;
@@ -38,7 +39,14 @@ hr {
   margin-right: 160px;
   padding: 0px 10px;
 }
-.footer {
-  margin-left: 160;
-  margin-right: 160;
+.wrapper {
+  background-color: darkgray;
+  border: 2px dashed blue;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 0px;
+}
+.container {
+  display: flex;
+  gap: 1px;
 }
