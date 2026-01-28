@@ -1,4 +1,6 @@
 <!doctype html>
+<div id="left"></div>
+<div id="right"></div>
 <html lang="en_US">
   <head>
     <link rel="stylesheet" href="Personal-Website-CSS.css" />
@@ -8,43 +10,62 @@
       <div class="wrapper">
         <h1>Hunter Liles</h1>
         <p>Professional Links</p>
-        <a href="https://github.com/HunterLiles">Github</a>
-        <a href="https://www.linkedin.com/in/hunter-liles/">linkedin</a>
-        <a href="Extra/Hunter_Liles_Resume.pdf">Resume</a>
+        <a target="_blank" href="https://github.com/HunterLiles">Github</a>
+        <a target="_blank" href="https://www.linkedin.com/in/hunter-liles/"
+          >linkedin</a
+        >
+        <a target="_blank" href="Extra/Hunter_Liles_Resume.pdf">Resume</a>
       </div>
-      <hr />
-      <br />
-      <hr />
     </header>
     <body>
-      <div class="wrapper">
-        <h4>About Me</h4>
-        <p>
-          Programming is more than just a means to a future for me, it is my
-          personal hobby. There is nothing I cannot learn, and there is nothing
-          I cannot do. I am fully dedicated to every role put upon me and I
-          won't ever fail to rise to the occasion.
-        </p>
+      <div id="lists">
+        <div class="wrapper">
+          <details>
+            <summary>About Me</summary>
+            <p>
+              Programming is more than just a means to a future for me, it is my
+              personal hobby. There is nothing I cannot learn, and there is
+              nothing I cannot do. I am fully dedicated to every role put upon
+              me and I won't ever fail to rise to the occasion.
+            </p>
+          </details>
+        </div>
+        <div class="wrapper">
+          <details>
+            <summary>Languages</summary>
+            <ol>
+              <li>C</li>
+              <li>C++</li>
+              <li>C#</li>
+              <li>Java</li>
+              <li>Python</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>SQL</li>
+            </ol>
+          </details>
+        </div>
       </div>
       <hr />
       <br />
       <hr />
       <div class="container">
-        <img
-          src="Extra/ProfessionalHeadshot.JPG"
-          alt="description"
-          height="400"
-          width="600"
-        />
+        <img src="Extra/ProfessionalHeadshot.JPG" alt="description" />
         <div class="wrapper">
-          <p>Personal Projects</p>
+          <p>Projects</p>
           <ul>
             <li>
-              <a href="https://github.com/HunterLiles/BlossomCPP">BlossomCPP</a>
+              <a
+                target="_blank"
+                href="https://github.com/HunterLiles/BlossomCPP"
+                >BlossomCPP</a
+              >
             </li>
             <br />
             <li>
-              <a href="https://github.com/HunterLiles/GolfStatistics"
+              <a
+                target="_blank"
+                href="https://github.com/HunterLiles/GolfStatistics"
                 >GolfStatistics</a
               >
             </li>
@@ -58,6 +79,8 @@
   </div>
   <footer>
     <p>@ Hunter Liles</p>
+    <p>Email: hunterliles06@gmail.com</p>
+    <p>Phone: (337)358-0667</p>
     <p>Site made by Hunter Liles using HTML & CSS</p>
   </footer>
 </html>
