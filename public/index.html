@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#222222" />
+    <title>Hunter Liles — Graphics, Systems &amp; Research</title>
+    <meta
+      name="description"
+      content="Hunter Liles — Computer Science and Computational Mathematics at McNeese State University. Selected work in SDF rendering, graphics software, and systems."
+    />
+    <meta
+      property="og:title"
+      content="Hunter Liles — Graphics, Systems &amp; Research"
+    />
+    <meta
+      property="og:description"
+      content="Computer graphics is my niche. Curiosity takes me further. Explore my projects, research, and experience."
+    />
+    <meta property="og:type" content="website" />
+    <!-- Add canonical, og:url and an absolute og:image URL once the domain is confirmed. -->
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/vendor/terminal-0.7.5.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body class="terminal">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="container">
+      <header class="terminal-nav site-header">
+        <a
+          class="wordmark"
+          href="#top"
+          aria-label="hl — Hunter Liles, back to top"
+          >hl<span aria-hidden="true">_</span></a
+        >
+        <nav class="terminal-menu" aria-label="Main navigation">
+          <ul>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main id="main">
+        <section class="intro" id="top" aria-labelledby="identity">
+          <p class="eyebrow">GRAPHICS / SYSTEMS / RESEARCH</p>
+          <h1 id="identity">Hunter Liles<span class="accent">.</span></h1>
+          <p class="degree">
+            Computer Science &amp; Computational Mathematics<br /><span
+              class="muted"
+              >McNeese State University</span
+            >
+          </p>
+          <p class="positioning">
+            Computer graphics is my niche, but I’m driven by learning new
+            systems and solving difficult problems wherever they lead.
+          </p>
+          <div class="link-row" role="group" aria-label="Professional links">
+            <a
+              class="btn btn-primary btn-small"
+              href="assets/documents/resume.pdf"
+              >Resume <span aria-hidden="true">↗</span></a
+            >
+            <a href="https://github.com/HunterLiles"
+              >GitHub <span aria-hidden="true">↗</span></a
+            >
+            <a href="https://www.linkedin.com/in/hunter-liles-128145332/"
+              >LinkedIn <span aria-hidden="true">↗</span></a
+            >
+            <a href="mailto:hunterliles06@gmail.com"
+              >Email <span aria-hidden="true">↗</span></a
+            >
+          </div>
+        </section>
+
+        <section id="work" class="section" aria-labelledby="work-heading">
+          <div class="section-heading">
+            <h2 id="work-heading">
+              <span class="section-index">01 /</span> Selected work
+            </h2>
+            <span class="muted small">MATHEMATICS → WORKING SOFTWARE</span>
+          </div>
+          <article class="featured" aria-labelledby="sdf-heading">
+            <div class="project-heading">
+              <p class="eyebrow">RENDERING RESEARCH</p>
+              <span class="status">In progress</span>
+            </div>
+            <h3 id="sdf-heading">Signed Distance Field Research</h3>
+            <p class="project-summary">
+              Exploring the benefits and limitations of rendering geometry
+              defined by distance functions.
+            </p>
+            <div class="featured-grid">
+              <div>
+                <p>
+                  As an undergraduate researcher, I develop a custom SDF
+                  rendering engine with C++, Raylib, and GLSL, including shaders
+                  for the distance functions.
+                </p>
+                <ul class="evidence">
+                  <li>
+                    Raylib provides the application foundation while custom GLSL
+                    shaders define the rendered surfaces.
+                  </li>
+                  <li>
+                    The supplied captures show gyroid and repeating-surface
+                    experiments with adjustable camera and rendering parameters.
+                  </li>
+                  <li>
+                    These are visual experiments; comparative benchmarks and a
+                    detailed contribution breakdown are still to come.
+                  </li>
+                </ul>
+                <p class="technologies">C++ / GLSL / Raylib / SDFs</p>
+                <a
+                  class="project-link"
+                  href="https://github.com/daneboyd20001/SRPLightingEngine"
+                  >Explore the shared research repository
+                  <span aria-hidden="true">↗</span></a
+                >
+              </div>
+              <figure class="project-media">
+                <a
+                  href="assets/images/sdf-gyroid.webp"
+                  aria-label="View full-size SDF gyroid screenshot"
+                  ><img
+                    src="assets/images/sdf-gyroid.webp"
+                    width="1272"
+                    height="703"
+                    loading="lazy"
+                    decoding="async"
+                    alt="SDF engine showing a gyroid torus interior beside camera and lighting controls."
+                /></a>
+                <figcaption>
+                  Gyroid torus experiment · flat lighting, with the engine’s
+                  controls visible.
+                </figcaption>
+              </figure>
+            </div>
+            <details class="more-evidence">
+              <summary>View another rendering experiment</summary>
+              <figure>
+                <img
+                  src="assets/images/sdf-surface.webp"
+                  width="1273"
+                  height="699"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Repeating undulating SDF surface with visible dark artifacts and camera controls."
+                />
+                <figcaption>
+                  Repeating-surface experiment. Visible artifacts are part of
+                  the supplied result; this is not a correctness or performance
+                  benchmark.
+                </figcaption>
+              </figure>
+            </details>
+          </article>
+
+          <div class="project-grid">
+            <article aria-labelledby="blossom-heading">
+              <div class="project-heading">
+                <p class="eyebrow">GRAPHICS SOFTWARE</p>
+                <span class="status">In progress</span>
+              </div>
+              <h3 id="blossom-heading">Blossom</h3>
+              <p class="project-summary">
+                A small, data-oriented Vulkan sandbox for experimenting with
+                rendering and development tools.
+              </p>
+              <figure class="project-media">
+                <img
+                  src="assets/images/blossom.webp"
+                  width="400"
+                  height="225"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Earlier Blossom editor showing a two-dimensional scene of trees in two viewports."
+                />
+                <figcaption>
+                  Earlier Blossom build · frame from the supplied recording. The
+                  linked branch now uses Vulkan.
+                </figcaption>
+              </figure>
+              <ul class="evidence">
+                <li>
+                  The Vulkan branch uses GLFW, Dear ImGui, and HLSL shaders.
+                </li>
+                <li>
+                  Shader reload keeps the current pipelines active if a
+                  replacement is invalid, preserving a working render while
+                  iterating.
+                </li>
+                <li>
+                  Project browsing and embedded Neovim are implemented. Script
+                  attachments exist; native script compilation and reload are
+                  still planned.
+                </li>
+              </ul>
+              <p class="technologies">C++ / Vulkan / HLSL / Dear ImGui</p>
+              <a
+                class="project-link"
+                href="https://github.com/HunterLiles/Blossom/tree/Vulkan"
+                >Inspect the Vulkan branch <span aria-hidden="true">↗</span></a
+              >
+            </article>
+            <article aria-labelledby="trading-heading">
+              <div class="project-heading">
+                <p class="eyebrow">SYSTEMS / COMPUTATION</p>
+                <span class="status muted">Details pending</span>
+              </div>
+              <h3 id="trading-heading">Algorithmic Trading System</h3>
+              <p class="project-summary">
+                A project exploring algorithmic trading through software.
+              </p>
+              <div class="draft-copy">
+                <p class="eyebrow">PROJECT NOTES TO COME</p>
+                <p>
+                  The problem, implementation, and engineering decisions will be
+                  documented here.
+                </p>
+                <p class="muted">
+                  Contribution details, working features, and results are
+                  awaiting confirmation.
+                </p>
+              </div>
+              <a
+                class="project-link"
+                href="https://github.com/HunterLiles/Trading"
+                >Trading repository <span aria-hidden="true">↗</span></a
+              >
+              <p class="small muted availability-note">
+                Repository access may be limited.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section
+          id="experience"
+          class="section"
+          aria-labelledby="experience-heading"
+        >
+          <div class="section-heading">
+            <h2 id="experience-heading">
+              <span class="section-index">02 /</span> Research &amp; experience
+            </h2>
+          </div>
+          <div class="experience-list">
+            <article class="experience-row">
+              <p class="muted">Current</p>
+              <div>
+                <h3>Undergraduate Student Researcher</h3>
+                <p class="organization">
+                  McNeese State University · Engineering &amp; Computer Science
+                </p>
+                <p>
+                  Research in graphics and interactive systems. Collaborated
+                  with two other undergraduate researchers on a proof-of-concept
+                  VR puzzle game in Unity.
+                </p>
+              </div>
+            </article>
+            <article class="experience-row">
+              <p class="muted">Current</p>
+              <div>
+                <h3>McNeese Tutor</h3>
+                <p class="organization">
+                  McNeese State University · Math &amp; Science
+                </p>
+                <p>Helping fellow students understand mathematical concepts.</p>
+              </div>
+            </article>
+            <article class="experience-row">
+              <p class="muted">Current</p>
+              <div>
+                <h3>Church IT</h3>
+                <p class="organization">Iowa First Baptist Church</p>
+                <p>
+                  Hardware maintenance and technical troubleshooting for the
+                  church’s media team.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="education-heading">
+          <div class="section-heading">
+            <h2 id="education-heading">
+              <span class="section-index">03 /</span> Education &amp; technical
+              skills
+            </h2>
+          </div>
+          <div class="qualifications-grid">
+            <div>
+              <h3>McNeese State University</h3>
+              <p>Computer Science &amp;<br />Computational Mathematics</p>
+              <p class="muted">
+                Dual degree / major<br />Expected May 2028 · Lake Charles, LA
+              </p>
+            </div>
+            <dl class="skills">
+              <div>
+                <dt>Languages</dt>
+                <dd>C++, C, GLSL, Java, SQL</dd>
+              </div>
+              <div>
+                <dt>Graphics</dt>
+                <dd>
+                  OpenGL, Raylib, Unity<br />SDF rendering, physics simulation
+                </dd>
+              </div>
+              <div>
+                <dt>Tools</dt>
+                <dd>Git / GitHub, Linux, LaTeX, SQL Servers</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <section id="about" class="section" aria-labelledby="about-heading">
+          <div class="section-heading">
+            <h2 id="about-heading">
+              <span class="section-index">04 /</span> Beyond the projects
+            </h2>
+          </div>
+          <div class="about-grid">
+            <div>
+              <h3>A little about me</h3>
+              <a
+                class="portrait"
+                href="assets/images/headshot.webp"
+                aria-label="View Hunter Liles’s photograph"
+                ><img
+                  class="portrait-photo"
+                  src="assets/images/headshot.webp"
+                  width="720"
+                  height="480"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Hunter Liles in a suit in front of a university display." /><img
+                  class="portrait-ascii"
+                  src="assets/images/headshot-ascii.webp"
+                  width="720"
+                  height="402"
+                  loading="lazy"
+                  decoding="async"
+                  alt=""
+                  aria-hidden="true"
+              /></a>
+              <p class="small muted portrait-hint">
+                Hover or focus to meet the person behind the pixels.
+              </p>
+              <p class="muted">
+                About text coming soon — a little more on my interests, what I’m
+                learning, and life outside the code.
+              </p>
+            </div>
+            <div class="renderer" id="renderer">
+              <h3>From coordinates to pixels</h3>
+              <div class="renderer-stage">
+                <img
+                  id="renderer-fallback"
+                  src="assets/renderer-static.svg"
+                  width="560"
+                  height="350"
+                  loading="lazy"
+                  alt="Static wireframe torus illustrating projected three-dimensional geometry."
+                /><canvas
+                  id="renderer-canvas"
+                  width="560"
+                  height="350"
+                  aria-label="A rotating wireframe torus projected onto a two-dimensional canvas"
+                  role="img"
+                  hidden
+                ></canvas>
+              </div>
+              <div class="renderer-controls">
+                <span class="small muted">ROTATION → PERSPECTIVE</span
+                ><button
+                  id="renderer-toggle"
+                  class="btn btn-ghost btn-primary btn-small"
+                  type="button"
+                  hidden
+                >
+                  Pause animation
+                </button>
+              </div>
+              <p>
+                A small study in geometry: rotate a torus in 3D, then project
+                its vertices onto a 2D canvas.
+              </p>
+              <p class="small muted" id="renderer-status">
+                Static preview. Animation is an optional enhancement.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer id="contact" class="site-footer">
+        <div>
+          <p class="eyebrow">LET’S TALK</p>
+          <h2>Have an interesting problem?</h2>
+          <a class="email-link" href="mailto:hunterliles06@gmail.com"
+            >hunterliles06@gmail.com <span aria-hidden="true">↗</span></a
+          >
+        </div>
+        <div class="footer-links">
+          <a href="https://github.com/HunterLiles">GitHub ↗</a
+          ><a href="https://www.linkedin.com/in/hunter-liles-128145332/"
+            >LinkedIn ↗</a
+          ><a href="assets/documents/resume.pdf">Resume ↗</a
+          ><a href="#top">Back to top ↑</a>
+        </div>
+        <p class="small muted footer-note">
+          Hunter Liles · Built with
+          <a href="https://terminalcss.xyz/">Terminal.css</a>.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

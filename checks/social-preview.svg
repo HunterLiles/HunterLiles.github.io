@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#222222"/>
+  <g font-family="DejaVu Sans Mono, monospace">
+    <text x="80" y="100" fill="#c9a554" font-size="28">hl_</text>
+    <path d="M80 140H1120" stroke="#43492a"/>
+    <text x="80" y="232" fill="#bb7744" font-size="22">GRAPHICS / SYSTEMS / RESEARCH</text>
+    <text x="75" y="335" fill="#d7c483" font-size="80" font-weight="bold">Hunter Liles<tspan fill="#bb7744">.</tspan></text>
+    <text x="80" y="410" fill="#c2c2b0" font-size="25">Computer Science &amp; Computational Mathematics</text>
+    <text x="80" y="510" fill="#d7c483" font-size="25">Computer graphics is my niche.</text>
+    <text x="80" y="552" fill="#d7c483" font-size="25">Curiosity takes me further.</text>
+  </g>
+</svg>

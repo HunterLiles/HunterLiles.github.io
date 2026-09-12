@@ -1,0 +1,99 @@
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.58in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{microtype}
+
+\definecolor{ink}{HTML}{172019}
+\definecolor{rule}{HTML}{4D7155}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlist[itemize]{leftmargin=1.15em, itemsep=1.5pt, topsep=3pt, parsep=0pt, after=\vspace{1pt}}
+\titleformat{\section}{\large\bfseries\color{ink}}{}{0pt}{}[\vspace{1pt}\color{rule}\titlerule]
+\titlespacing*{\section}{0pt}{9pt}{5pt}
+\urlstyle{same}
+
+\newcommand{\entry}[4]{
+  \textbf{#1} \hfill \textit{#2}\\
+  \textit{#3} \hfill #4\\[1.5pt]
+}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\bfseries Hunter Liles}\\[3pt]
+  Iowa, LA \enspace|\enspace
+  \href{mailto:hunterliles06@gmail.com}{hunterliles06@gmail.com} \enspace|\enspace
+  337-358-0667\\
+  \href{https://github.com/HunterLiles}{github.com/HunterLiles} \enspace|\enspace
+  \href{https://www.linkedin.com/in/hunter-liles/}{linkedin.com/in/hunter-liles}
+\end{center}
+
+\vspace{-1pt}
+\begin{center}
+  \textit{Computer Science and Computational Mathematics student seeking software engineering work, with focused knowledge of graphics and rendering.}
+\end{center}
+
+\section{Education}
+\entry{McNeese State University}{Expected 2028}{Bachelor of Science in Computer Science and Computational Mathematics}{Lake Charles, LA}
+\begin{itemize}
+  \item Computer Science GPA: approximately 3.8/4.0
+\end{itemize}
+
+\section{Research \& Engineering Experience}
+\entry{Undergraduate Student Researcher}{Current}{McNeese State University --- Engineering \& Computer Science}{Lake Charles, LA}
+\begin{itemize}
+  \item Develop a custom signed distance field rendering engine with another undergraduate researcher using C++, Raylib, and GLSL.
+  \item Investigate mathematical geometry representations as an alternative to traditional triangle-based rendering.
+\end{itemize}
+
+\entry{Math \& Science Tutor}{Current}{MAST Department, McNeese State University}{Lake Charles, LA}
+\begin{itemize}
+  \item Help students understand mathematics and physics by translating difficult concepts into clear, workable steps.
+\end{itemize}
+
+\entry{Church IT}{Current}{Iowa First Baptist Church}{Iowa, LA}
+\begin{itemize}
+  \item Maintain church computers and troubleshoot hardware and software for the media team.
+\end{itemize}
+
+\section{Selected Projects}
+\textbf{Blossom} \hfill \textit{C++, OpenGL}\\
+\textit{2D game engine --- active development}
+\begin{itemize}
+  \item Build a C++ game engine with OpenGL, GLFW, GLAD, and Dear ImGui.
+  \item Implement custom vector and quaternion math libraries to support engine systems.
+\end{itemize}
+
+\textbf{Signed Distance Field Rendering Engine} \hfill \textit{C++, GLSL}\\
+\textit{Collaborative rendering research project --- active development}
+\begin{itemize}
+  \item Create custom GLSL shaders for signed distance field functions and experiment with procedural geometry.
+  \item Collaborate with another undergraduate researcher on a low-level rendering implementation.
+\end{itemize}
+
+\textbf{Custom Profiler} \hfill \textit{Rust}\\
+\textit{Collaborative developer tool --- active development}
+\begin{itemize}
+  \item Develop a terminal profiler for logging frame times and CPU time to support application optimization.
+\end{itemize}
+
+\textbf{Algorithmic Trading} \hfill \textit{Rust, Vulkan}\\
+\textit{Collaborative paper-trading TUI --- active development}
+\begin{itemize}
+  \item Build a terminal interface for testing and configuring paper-trading models with headless Vulkan.
+\end{itemize}
+
+\section{Technical Skills}
+\textbf{Languages:} C, C++, Rust, Java, Python, HTML, CSS, SQL, GLSL, HLSL\\
+\textbf{Graphics \& systems:} OpenGL, Vulkan, graphics programming, physics simulation\\
+\textbf{Tools:} Git/GitHub, Linux, SQL Servers, LaTeX, Raylib
+
+\end{document}
