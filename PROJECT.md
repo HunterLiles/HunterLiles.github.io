@@ -124,7 +124,7 @@ The initial release is a single-page portfolio/CV with normal links and anchor n
 - Navigation must behave like a normal website; terminal syntax may be used as visual language only.
 - Core content and links must remain usable when JavaScript is unavailable.
 - The renderer must pause when it is outside the viewport or the page is hidden.
-- Provide a keyboard- and touch-accessible pause/resume control. Use a static fallback when animation is unavailable or not requested.
+- Provide a keyboard- and touch-accessible pause/resume control. Show a non-animated canvas state when reduced motion is requested.
 - Respect `prefers-reduced-motion`; provide a static renderer state and avoid nonessential transitions when reduced motion is requested.
 - No Typed.js skill carousel, blinking or pulsing links, or interaction that hides information until an animation completes.
 - ASCII morphing is optional and should be included only if it adds value without adding disproportionate code or dependency weight.
@@ -215,7 +215,7 @@ The initial release is a single-page portfolio/CV with normal links and anchor n
 # Error Handling Expectations
 
 - Core content and navigation must remain available if JavaScript fails or is disabled.
-- Renderer failure must be isolated: show a static fallback or short explanation without affecting the rest of the page.
+- Renderer failure must be isolated: show a short explanation without affecting the rest of the page.
 - Missing media must not collapse the layout, hide project text, or create major layout shifts.
 - External links should be checked before release; unavailable external resources must not prevent the page from loading.
 - Production code should produce no uncaught exceptions or console errors during normal use.

@@ -3,10 +3,9 @@
 
   const container = document.querySelector("#renderer");
   const canvas = document.querySelector("#renderer-canvas");
-  const fallback = document.querySelector("#renderer-fallback");
   const toggle = document.querySelector("#renderer-toggle");
   const status = document.querySelector("#renderer-status");
-  if (!container || !canvas || !fallback || !toggle || !status) return;
+  if (!container || !canvas || !toggle || !status) return;
 
   let context;
   let frame = 0;
@@ -27,7 +26,11 @@
     for (let side = 0; side < sides; side++) {
       const v = (side / sides) * Math.PI * 2;
       const radius = 1.15 + 0.43 * Math.cos(v);
-      vertices.push([radius * Math.cos(u), radius * Math.sin(u), 0.43 * Math.sin(v)]);
+      vertices.push([
+        radius * Math.cos(u),
+        radius * Math.sin(u),
+        0.43 * Math.sin(v),
+      ]);
     }
   }
 
@@ -37,8 +40,7 @@
     frame = 0;
     canvas.hidden = true;
     toggle.hidden = true;
-    fallback.hidden = false;
-    status.textContent = "Static preview. Live rendering is unavailable in this browser.";
+    status.textContent = "Live rendering is unavailable in this browser.";
   }
 
   function draw() {
@@ -53,7 +55,7 @@
       const ry = y * Math.cos(tilt) - rz * Math.sin(tilt);
       const depth = y * Math.sin(tilt) + rz * Math.cos(tilt) + 5;
       // Geometry remains in front of the camera; no near-plane clipping is needed.
-      const scale = height * 1.05 / depth;
+      const scale = (height * 1.05) / depth;
       return [width / 2 + rx * scale, height / 2 + ry * scale, depth];
     });
     context.lineWidth = Math.max(0.8, width / 560);
@@ -63,7 +65,10 @@
         const point = projected[index];
         context.strokeStyle = `rgba(120, 131, 75, ${0.24 + (7 - point[2]) * 0.16})`;
         context.beginPath();
-        for (const neighbor of [ring * sides + (side + 1) % sides, ((ring + 1) % rings) * sides + side]) {
+        for (const neighbor of [
+          ring * sides + ((side + 1) % sides),
+          ((ring + 1) % rings) * sides + side,
+        ]) {
           context.moveTo(point[0], point[1]);
           context.lineTo(projected[neighbor][0], projected[neighbor][1]);
         }
@@ -79,10 +84,12 @@
       const width = Math.max(1, Math.round(canvas.clientWidth * ratio));
       if (canvas.width !== width) {
         canvas.width = width;
-        canvas.height = Math.round(width * 5 / 8);
+        canvas.height = Math.round((width * 5) / 8);
       }
       draw();
-    } catch { fail(); }
+    } catch {
+      fail();
+    }
   }
 
   function tick(time) {
@@ -93,7 +100,9 @@
       lastTime = time;
       draw();
       frame = requestAnimationFrame(tick);
-    } catch { fail(); }
+    } catch {
+      fail();
+    }
   }
 
   function sync() {
@@ -105,7 +114,8 @@
     status.textContent = paused
       ? "Animation paused. The geometry remains visible."
       : "Animation pauses automatically when offscreen or in a hidden tab.";
-    if (!paused && visible && !document.hidden) frame = requestAnimationFrame(tick);
+    if (!paused && visible && !document.hidden)
+      frame = requestAnimationFrame(tick);
   }
 
   function initialize() {
@@ -117,14 +127,21 @@
       canvas.hidden = false;
       resize();
       if (failed) return;
-      fallback.hidden = true;
       toggle.hidden = false;
-    } catch { fail(); }
+    } catch {
+      fail();
+    }
   }
 
-  toggle.addEventListener("click", () => { paused = !paused; sync(); });
+  toggle.addEventListener("click", () => {
+    paused = !paused;
+    sync();
+  });
   document.addEventListener("visibilitychange", sync);
-  motion.addEventListener("change", () => { paused = motion.matches; sync(); });
+  motion.addEventListener("change", () => {
+    paused = motion.matches;
+    sync();
+  });
   window.addEventListener("resize", resize);
   if ("IntersectionObserver" in window) {
     const observer = new IntersectionObserver(([entry]) => {
@@ -134,5 +151,5 @@
     });
     observer.observe(canvas.parentElement);
   }
-  // Without IntersectionObserver, retain the static, zero-animation fallback.
+  // Without IntersectionObserver, leave the renderer uninitialized.
 })();
